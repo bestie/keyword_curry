@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = KeywordCurry::VERSION
   spec.authors       = ["Stephen Best"]
   spec.email         = ["bestie@gmail.com"]
-  spec.summary       = %q{Augments Ruby currying to handle required keyword arguments. Proc style objects can be curried until all its required keywords have been received}
-  spec.description   = spec.summary + %q{Proc like objects can be curried until all their required keywords have been received}
+  spec.summary       = %q{Augments Ruby currying to handle MRI 2.1 required keyword arguments.}
+  spec.description   = spec.summary + %q{Proc like objects can be curried until all their required keywords have been received. Monkey patching is optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
