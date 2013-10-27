@@ -4,7 +4,10 @@ Augments Ruby currying to handle MRI 2.1 required keyword arguments.
 
 Proc like objects can be curried until all their required keywords have been received
 
-Please note **monkey patching is optional**
+**Please note**:
+* Monkey patching is optional.
+* Ruby 2.1+ is required.
+* Optional keyword arguments cannot be curried.
 
 ## Installation
 
