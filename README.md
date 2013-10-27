@@ -1,5 +1,7 @@
 # KeywordCurry
 
+[![Gem Version](https://badge.fury.io/rb/keyword_curry.png)](http://badge.fury.io/rb/keyword_curry)
+
 Augments Ruby currying to handle MRI 2.1 required keyword arguments.
 
 Proc like objects can be curried until all their required keywords have been received
