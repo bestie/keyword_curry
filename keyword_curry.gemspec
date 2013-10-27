@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["bestie@gmail.com"]
   spec.summary       = %q{Augments Ruby currying to handle MRI 2.1 required keyword arguments.}
   spec.description   = spec.summary + %q{Proc like objects can be curried until all their required keywords have been received. Monkey patching is optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/bestie/keyword_curry"
   spec.license       = "MIT"
 
   spec.required_ruby_version = "2.1.0"
