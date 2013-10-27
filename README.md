@@ -1,6 +1,10 @@
 # KeywordCurry
 
-TODO: Write a gem description
+Augments Ruby currying to handle MRI 2.1 required keyword arguments.
+
+Proc like objects can be curried until all their required keywords have been received
+
+Please note **monkey patching is optional**
 
 ## Installation
 
@@ -18,7 +22,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Mnkey patching is optional
+
+This gem merely adds a couple of modules and it's up to you whether you would
+like all of your Procs monkey patched.
+
+The monkey patch version
+```ruby
+require "keyword_curry"
+
+Proc.prepend(KeywordCurry::KeywordArgumentCurrying)
+```
+
+You may wish for this behaviour only on special Procs
+```ruby
+require "keyword_curry"
+
+class SpecialProc < Proc
+  include KeywordCurry::KeywordArgumentCurrying
+
+  # ...
+end
+```
+
+### Currying Examples
+
+```ruby
+```
 
 ## Contributing
 
