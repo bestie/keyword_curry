@@ -8,13 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = KeywordCurry::VERSION
   spec.authors       = ["Stephen Best"]
   spec.email         = ["bestie@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = %q{Augments Ruby currying to handle required keyword arguments. Proc style objects can be curried until all its required keywords have been received}
+  spec.description   = spec.summary + %q{Proc like objects can be curried until all their required keywords have been received}
   spec.homepage      = ""
   spec.license       = "MIT"
 
+  spec.required_ruby_version = "2.1.0"
+
   spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.executables   = []
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
