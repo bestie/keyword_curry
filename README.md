@@ -27,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-### Mnkey patching is optional
+### Monkey patching is optional
 
 This gem merely adds a couple of modules and it's up to you whether you would
 like all of your Procs monkey patched.
