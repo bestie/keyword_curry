@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/bestie/keyword_curry"
   spec.license       = "MIT"
 
-  spec.required_ruby_version = "2.1.0"
+  # TODO: figure out why this doesn't work
+  # spec.required_ruby_version = ">= 2.1.0"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = []
