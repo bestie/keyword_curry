@@ -6,5 +6,7 @@ if RUBY_VERSION < "2.1.0"
 end
 
 module KeywordCurry
-  # Your code goes here...
+  def self.monkey_patch_proc
+    Proc.prepend(KeywordArgumentCurrying)
+  end
 end

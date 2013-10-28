@@ -36,7 +36,7 @@ The monkey patch version
 ```ruby
 require "keyword_curry"
 
-Proc.prepend(KeywordCurry::KeywordArgumentCurrying)
+KeywordCurry,monkey_patch_proc
 ```
 
 You may wish for this behaviour only on special Procs

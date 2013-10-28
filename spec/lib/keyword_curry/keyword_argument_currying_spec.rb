@@ -1,10 +1,11 @@
-require 'spec_helper'
+require "spec_helper"
 
-require 'keyword_curry/keyword_argument_currying'
+require "keyword_curry"
+require "keyword_curry/keyword_argument_currying"
 
-describe KeywordArgumentCurrying do
+describe KeywordCurry::KeywordArgumentCurrying do
   before(:all) {
-    Proc.prepend(KeywordArgumentCurrying)
+    KeywordCurry.monkey_patch_proc
   }
 
   describe "#curry" do

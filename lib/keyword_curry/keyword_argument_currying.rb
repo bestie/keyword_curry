@@ -1,4 +1,4 @@
-module KeywordArgumentCurrying
+module KeywordCurry::KeywordArgumentCurrying
   def curry(arity = arity)
     required_keywords = parameters
       .select { |param| param.first == :keyreq }
