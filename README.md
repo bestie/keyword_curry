@@ -36,7 +36,7 @@ The monkey patch version
 ```ruby
 require "keyword_curry"
 
-KeywordCurry,monkey_patch_proc
+KeywordCurry.monkey_patch_proc
 ```
 
 You may wish for this behaviour only on special Procs
@@ -52,7 +52,43 @@ end
 
 ### Currying Examples
 
+The function is not invoked until all the arguments have been received.
+Each time a curried function is returned that will accept the next arguments.
+
+#### Three keyword arguments one at a time
 ```ruby
+func = lambda { |a:,b:,c:| [a,b,c].join(" and ") }
+
+func.curry.call( a: "A" ).call( b: "B" ).call( c: "C" )
+
+=> "A and B and C"
+```
+
+#### In any order
+```ruby
+func = lambda { |a:,b:,c:| [a,b,c].join(" and ") }
+
+func.curry.call( b: "B" ).call( a: "A" ).call( c: "C" )
+
+=> "A and B and C"
+```
+
+#### With any grouping
+```ruby
+func = lambda { |a:,b:,c:| [a,b,c].join(" and ") }
+
+func.curry.call( c: "C", b: "B" ).call( a: "A" )
+
+=> "A and B and C"
+```
+
+#### Plays nice with positional arguments too
+```ruby
+func = lambda { |first, a:,b:,c:| [first, a,b,c].join(" and ") }
+
+func.curry.call("first").call( c: "C", b: "B" ).call( a: "A" )
+
+=> "First and A and B and C"
 ```
 
 ## Contributing
